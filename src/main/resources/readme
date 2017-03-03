@@ -1,0 +1,9 @@
+run: mvn clean install to build application jar
+run: java -jar target/ncr-0.0.1-SNAPSHOT.jar
+
+$ curl 'http://localhost:8080/address/33.969601/-84.100033' -i
+$ curl 'http://localhost:8080/address/1' -i
+$ curl 'http://localhost:8080/address' -i
+
+for remote debugging:
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
